@@ -18,9 +18,9 @@ app.use(passport.initialize());
 passport.use(new facebookStrategy({
 
     // pull in our app id and secret from our auth.js file
-    clientID        : "########yourclientid############",
-    clientSecret    : "#############yourclientsecret##########",
-    callbackURL     : "http://localhost:5000/facebook/callback",
+    clientID        : "1769548393239535",
+    clientSecret    : "4919b9656f5e0ed39ac061e65d3fab16",
+    callbackURL     : "http://localhost:3000/facebook/callback",
     profileFields: ['id', 'displayName', 'name', 'gender', 'picture.type(large)','email']
 
 },// facebook will send back the token and profile
@@ -115,6 +115,6 @@ app.get('/',(req,res) => {
     res.render("index")
 })
 
-app.listen(5000,() => {
-    console.log("App is listening on Port 5000")
+app.listen(3000,() => {
+    console.log("App is listening on Port 3000")
 })
